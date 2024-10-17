@@ -4,6 +4,7 @@ import unittest
 #follow this example to add questions b, c, and d for testing including their functions
 from question_b.question_b import get_fahrenheit
 from question_c.question_c import get_sum_of_evens
+from question_d.question_d import get_day_of_week
 from src.question_a.question_a import test_config, use_local_variable
 
 class Test_Config(unittest.TestCase):
@@ -24,6 +25,12 @@ class Test_Config(unittest.TestCase):
         self.assertEqual (30, get_sum_of_evens(11))
         self.assertEqual (30, get_sum_of_evens(10))
         self.assertEqual (20, get_sum_of_evens(8))
+    def test_get_day_of_week(self):
+        self.assertEqual ('Invalid Number', get_day_of_week(0))
+        self.assertEqual ('Monday', get_day_of_week(1))
+        self.assertEqual ('Tuesday', get_day_of_week(2))
+        self.assertEqual ('Wednesday', get_day_of_week(3))
+        self.assertEqual ('Invalid Number', get_day_of_week(8))
                           
 
 

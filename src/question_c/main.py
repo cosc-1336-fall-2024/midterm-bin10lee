@@ -6,7 +6,7 @@ def main():
         if option=='Quit':
             break
         else:
-            get_sum_of_evens(num)
+            return get_sum_of_evens
 main()
 
 
